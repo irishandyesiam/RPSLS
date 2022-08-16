@@ -1,6 +1,8 @@
 ##run game##
-from HvsH import Human
+# from HvsH import Human
+from HvsAI import AI
 
-game = Human()
+game = AI()
 
 game.select_gesture()
+# game.compare()
