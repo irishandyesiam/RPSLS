@@ -9,7 +9,14 @@ class Human(Player):
         gesture = input(f"Please select a gesture {gestures}")
         print(f"You have selected {gesture}")
         if gesture == "Rock":
-            print("Cool")
+            return gesture
+        elif gesture == "Paper":
+            return gesture
+        elif gesture == "Scissors":
+            return gesture
+        elif gesture == "Lizard":
+            return gesture
+        elif gesture == "Spock":
             return gesture
         else: 
             print("Try again")

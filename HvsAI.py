@@ -1,3 +1,4 @@
+from operator import ge
 from player import Player
 import random
 
@@ -11,7 +12,14 @@ class AI(Player):
         gesture = ai_gesture
         print(f"Siri selected {gesture}")
         if gesture == "Rock":
-            print("Cool")
+            return gesture
+        elif gesture == "Paper":
+            return gesture
+        elif gesture == "Scissors":
+            return gesture
+        elif gesture == "Lizard":
+            return gesture
+        elif gesture == "Spock":
             return gesture
         # else: 
         #     print("Try again")
