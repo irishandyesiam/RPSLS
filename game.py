@@ -21,7 +21,6 @@ class Game:
     def display_winner(self):
         human_win_counter = self.human_player.score
         ai_win_counter = self.ai_player.score
-        self.compare()
         if human_win_counter() >= 2:
             print("Congrats! Human wins!")
         elif ai_win_counter >= 2:
@@ -122,6 +121,9 @@ class Game:
                 # return ai_win_counter
         print(f"Human score at {human_win_counter}.")
         print(f"AI score at {ai_win_counter}.")
+        self.display_winner()
+        self.compare()
+
         
     def game_mode(self):
         pass
