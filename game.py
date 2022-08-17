@@ -5,13 +5,12 @@ from HvsH import Human
 class Game:
 
     def __init__(self) -> None:
-        self.ai_player = AI("Siri")
-        self.human_player = Human("Chester")
+        self.ai_player = AI()
+        self.human_player = Human()
 
     def run_game(self):
-        self.ai_player.select_gesture()
-        self.human_player.select_gesture()
         self.compare()
+       
 
     def welcome(self):
         pass
