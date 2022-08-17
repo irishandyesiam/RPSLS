@@ -34,9 +34,23 @@ class Game:
             else: 
                 print("Paper covers rock! You lose.")
         elif gesture1 == "Paper":
-            if
+            if ai_gesture == "Rock":
+                print("Paper covers rock! You win!")
+            elif ai_gesture == "Scissors":
+                print("Scissors cuts paper! You lose!")
+            elif ai_gesture == "Lizard":
+                print("Lizard eats paper! You lose.")
+            else:
+                print("Paper disproves Spock! You win!")
         elif gesture1 == "Scissors":
-            if
+            if ai_gesture == "Rock":
+                print("Rock crushes scissors! You lose.")
+            elif ai_gesture == "Paper":
+                print("Scissors cuts paper! You win!")
+            elif ai_gesture == "Scissors":
+                print("Scissors decapitates lizard! You win!")
+            else:
+                print("Spock smashes scissors! You lose.")
         elif gesture1 == "Lizard":
             if
         elif gesture1 == "Spock":
