@@ -11,7 +11,6 @@ class Game:
     def run_game(self):
         self.compare()
         
-
     def welcome(self):
         pass
 
@@ -19,38 +18,32 @@ class Game:
         pass
 
     def display_winner(self):
-        human_win_counter = self.human_player.score
-        ai_win_counter = self.ai_player.score
-        if human_win_counter() >= 2:
+        if self.human_player.score >= 2:
             print("Congrats! Human wins!")
-        elif ai_win_counter >= 2:
+        elif self.ai_player.score >= 2:
             print("AI wins! Bye bye human race.")
+        self.play_again()
        
 
     def compare(self):
         gesture1 = self.human_player.select_gesture()
         ai_gesture = self.ai_player.select_gesture()
-        human_win_counter = self.human_player.score
-        ai_win_counter = self.ai_player.score
+        
         if gesture1 == ai_gesture:
             print("It's a tie")
         elif gesture1 == "Rock":
             if ai_gesture == "Scissors":
                 print("Rock crushes scissors! You win!")
-                human_win_counter += 1
-                # return human_win_counter
+                self.human_player.tally_score()
             elif ai_gesture == "Lizard":
                 print("Rock crushes lizard! You win!")
-                human_win_counter += 1
-                # return human_win_counter
+                self.human_player.tally_score()
             elif ai_gesture == "Spock":
                 print("Spock vaporizes rock! You lose.")
-                ai_win_counter += 1
-                # return ai_win_counter
+                self.ai_player.tally_score()
             else: 
                 print("Paper covers rock! You lose.")
-                ai_win_counter += 1
-                # return ai_win_counter
+                self.ai_player.tally_score()
         elif gesture1 == "Paper":
             if ai_gesture == "Rock":
                 print("Paper covers rock! You win!")
@@ -119,10 +112,19 @@ class Game:
                 print("Paper disproves Spock! You lose.")
                 ai_win_counter += 1
                 # return ai_win_counter
-        print(f"Human score at {human_win_counter}.")
-        print(f"AI score at {ai_win_counter}.")
-        self.display_winner()
+       
+        print(f"Human score at {self.human_player.score}.")
+        print(f"AI score at {self.ai_player.score}.")
+        if self.human_player.score == 2:
+            self.display_winner()
+        elif self.ai_player.score == 2:
+            self.display_winner()
         self.compare()
+        
+        
+        
+       
+        
 
         
     def game_mode(self):

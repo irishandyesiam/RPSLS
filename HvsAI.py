@@ -4,7 +4,7 @@ import random
 
 class AI(Player):
     def __init__(self) -> None:
-        super().__init__("Siri", 0)
+        super().__init__("Siri")
 
     def select_gesture(self):
         gestures = ["Rock", "Paper", "Scissors", "Lizard", "Spock"]
@@ -25,4 +25,4 @@ class AI(Player):
         #     print("Try again")
         #     self.select_gesture()
 
-ai_player = Player("Siri", 0)
+ai_player = Player("Siri")
