@@ -22,15 +22,5 @@ class Human(Player):
             print("Try again")
             self.select_gesture()
 
-    def compare(self):
-        gesture = self.select_gesture()
-        if gesture == "Rock":
-            print(f"Both players selected. It's a tie")
-        # elif self.select_gesture == "Rock"
-        #     if #AI gesture# == "scissors":
-        #         print("win")
-        #     else:
-        #         print("you lose")
-        # pass
 
 human_player = Player("Chester")
