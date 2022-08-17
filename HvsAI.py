@@ -21,8 +21,6 @@ class AI(Player):
             return gesture
         elif gesture == "Spock":
             return gesture
-        # else: 
-        #     print("Try again")
-        #     self.select_gesture()
+
 
 ai_player = Player("Siri")

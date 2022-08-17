@@ -36,7 +36,7 @@ class Game:
             print("Congrats! Human wins!")
         elif self.ai_player.score >= 2:
             print("AI wins! Bye bye human race.")
-        elif self.human_player2 >= 2:
+        elif self.human_player2.score >= 2:
             print("Congrats! Human2 wins!")
         self.play_again()
     
@@ -203,8 +203,8 @@ class Game:
                 print("Paper disproves Spock! Human 2 wins!")
                 self.human_player2.tally_score()
        
-        print(f"Player 1 score at {self.human_player.score}.")
-        print(f"Player 2 score at {self.human_player2.score}.")
+        print(f"Human 1 score at {self.human_player.score}.")
+        print(f"Human 2 score at {self.human_player2.score}.")
         if self.human_player.score == 2:
             self.display_winner()
         elif self.human_player2.score == 2:
