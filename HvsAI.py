@@ -1,4 +1,3 @@
-from operator import ge
 from player import Player
 import random
 
