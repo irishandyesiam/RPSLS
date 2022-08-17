@@ -155,85 +155,69 @@ class Game:
             print("It's a tie")
         elif gesture1 == "Rock":
             if ai_gesture == "Scissors":
-                print("Rock crushes scissors! You win!")
+                print("Rock crushes scissors! Human 1 wins!")
                 self.human_player.tally_score()
             elif ai_gesture == "Lizard":
-                print("Rock crushes lizard! You win!")
+                print("Rock crushes lizard! Human 1 wins!")
                 self.human_player.tally_score()
             elif ai_gesture == "Spock":
-                print("Spock vaporizes rock! You lose.")
+                print("Spock vaporizes rock! Human 2 wins!")
                 self.human_player2.tally_score()
             else: 
-                print("Paper covers rock! You lose.")
+                print("Paper covers rock! Human 2 wins!")
                 self.human_player2.tally_score()
         elif gesture1 == "Paper":
             if ai_gesture == "Rock":
-                print("Paper covers rock! You win!")
-                human_win_counter += 1
-                # return human_win_counter
+                print("Paper covers rock! Human 1 wins!")
+                self.human_player.tally_score()
             elif ai_gesture == "Scissors":
-                print("Scissors cuts paper! You lose!")
-                ai_win_counter += 1
-                # return ai_win_counter
+                print("Scissors cuts paper! Human 2 wins!")
+                self.human_player2.tally_score()
             elif ai_gesture == "Lizard":
-                print("Lizard eats paper! You lose.")
-                ai_win_counter += 1
-                # return ai_win_counter
+                print("Lizard eats paper! Human 2 wins!")
+                self.human_player2.tally_score()
             else:
-                print("Paper disproves Spock! You win!")
-                human_win_counter += 1
-                # return human_win_counter
+                print("Paper disproves Spock! Human 1 wins!")
+                self.human_player.tally_score()
         elif gesture1 == "Scissors":
             if ai_gesture == "Rock":
-                print("Rock crushes scissors! You lose.")
-                ai_win_counter += 1
-                # return ai_win_counter
+                print("Rock crushes scissors! Human 2 wins!")
+                self.human_player2.tally_score()
             elif ai_gesture == "Paper":
-                print("Scissors cuts paper! You win!")
-                human_win_counter += 1
-                # return human_win_counter
-            elif ai_gesture == "Scissors":
-                print("Scissors decapitates lizard! You win!")
-                human_win_counter += 1
-                # return human_win_counter
+                print("Scissors cuts paper! Human 1 wins!")
+                self.human_player.tally_score()
+            elif ai_gesture == "Lizard":
+                print("Scissors decapitates lizard! Human 1 wins!")
+                self.human_player.tally_score()
             else:
-                print("Spock smashes scissors! You lose.")
-                ai_win_counter += 1
-                # return ai_win_counter
+                print("Spock smashes scissors! Human 2 wins!")
+                self.human_player2.tally_score()
         elif gesture1 == "Lizard":
             if ai_gesture == "Spock":
-                print("Lizard poisons Spock! You win!")
-                human_win_counter += 1
-                # return human_win_counter
+                print("Lizard poisons Spock! Human 1 wins!")
+                self.human_player.tally_score()
             elif ai_gesture == "Paper":
-                print("Lizard eats Paper! You win!")
-                human_win_counter += 1
-                # return human_win_counter
+                print("Lizard eats Paper! Human 1 wins!")
+                self.human_player.tally_score()
             elif ai_gesture == "Rock":
-                print("Rock crushes Lizard! You lose.")
-                ai_win_counter += 1
-                # return ai_win_counter
+                print("Rock crushes Lizard! Humans 2 wins!")
+                self.human_player2.tally_score()
             else:
-                print("Scissors decapitates Lizard! You lose.")
-                ai_win_counter += 1
-                # return ai_win_counter
+                print("Scissors decapitates Lizard! Humans 2 wins!")
+                self.human_player2.tally_score()
         elif gesture1 == "Spock":
             if ai_gesture == "Scissors":
-                print("Spock smashes Scissors! You win!")
-                human_win_counter += 1
-                # return human_win_counter
+                print("Spock smashes Scissors! Human 1 wins!")
+                self.human_player.tally_score()
             elif ai_gesture == "Rock":
-                print("Spock vaporizes Rock! You win!")
-                human_win_counter += 1
-                # return human_win_counter
+                print("Spock vaporizes Rock! Human 1 wins!")
+                self.human_player.tally_score()
             elif ai_gesture == "Lizard":
-                print("Lizard poisons Spock! You lose.")
-                ai_win_counter += 1
-                # return ai_win_counter
+                print("Lizard poisons Spock! Human 2 wins!")
+                self.human_player2.tally_score()
             else:
-                print("Paper disproves Spock! You lose.")
-                ai_win_counter += 1
-                # return ai_win_counter
+                print("Paper disproves Spock! Human 2 wins!")
+                self.human_player2.tally_score()
        
         print(f"Player 1 score at {self.human_player.score}.")
         print(f"Player 2 score at {self.human_player2.score}.")
