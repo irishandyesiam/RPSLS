@@ -1,4 +1,3 @@
-from player import Player
 from HvsAI import AI 
 from HvsH import Human
 
