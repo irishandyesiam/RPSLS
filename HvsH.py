@@ -2,7 +2,7 @@ from player import Player
 
 class Human(Player):
     def __init__(self) -> None:
-        super().__init__("Chester")
+        super().__init__("Chester", 0)
 
     def select_gesture(self):
         gestures = ["Rock", "Paper", "Scissors", "Lizard", "Spock"]
@@ -23,4 +23,4 @@ class Human(Player):
             self.select_gesture()
 
 
-human_player = Player("Chester")
+human_player = Player("Chester", 0)
