@@ -24,3 +24,4 @@ class Human(Player):
 
 
 human_player = Player("Chester")
+human_player2 = Player("Ivy")
