@@ -26,7 +26,7 @@ class Game:
             print("It's a tie")
         elif gesture1 == "Rock":
             if ai_gesture == "Scissors":
-                print("Rock smashes scissors! You win!")
+                print("Rock crushes scissors! You win!")
             elif ai_gesture == "Lizard":
                 print("Rock crushes lizard! You win!")
             elif ai_gesture == "Spock":
@@ -52,16 +52,24 @@ class Game:
             else:
                 print("Spock smashes scissors! You lose.")
         elif gesture1 == "Lizard":
-            if
+            if ai_gesture == "Spock":
+                print("Lizard poisons Spock! You win!")
+            elif ai_gesture == "Paper":
+                print("Lizard eats Paper! You win!")
+            elif ai_gesture == "Rock":
+                print("Rock crushes Lizard! You lose.")
+            else:
+                print("Scissors decapitates Lizard! You lose.")
         elif gesture1 == "Spock":
-            if
-        # elif self.ai_player.select_gesture == "Rock":
-        #     if AI ai_gesture == "scissors":
-        #         print("win")
-        #     else:
-        #         print("you lose")
-        pass
-
+            if ai_gesture == "Scissors":
+                print("Spock smashes Scissors! You win!")
+            elif ai_gesture == "Rock":
+                print("Spock vaporizes Rock! You win!")
+            elif ai_gesture == "Lizard":
+                print("Lizard poisons Spock! You lose.")
+            else:
+                print("Paper disproves Spock! You lose.")
+    
     def game_mode(self):
         pass
 
